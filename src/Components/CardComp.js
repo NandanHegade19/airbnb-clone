@@ -2,9 +2,9 @@ import React from 'react';
 import '../Styles/CardComp.css';
 
 
-function CardComp({src, description, title, price}) {
+function CardComp({src, description, title, price, nocard}) {
     return (
-        <div className = "card">
+        <div className = {`card ${nocard && 'nocard'}`}>
             <img src = {src} alt = ""/>
             <div className = "info">
                 <h2>{title}</h2>

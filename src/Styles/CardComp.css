@@ -17,7 +17,12 @@
     min-height: 200px;
     width: 100%;
   }
-  
+  .nocard{
+    box-shadow: unset;
+  }
+  .nocard:hover{
+    transform: unset;
+  }
   .info {
       color: black;
       margin-top: -9px;

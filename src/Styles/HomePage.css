@@ -1,4 +1,14 @@
+.home > h1 {
+    margin-left: 10%;
+}
 .section {
     display: flex;
-    padding: 30px;
+    padding: 2% 10%;
+}
+
+.section2 {
+    display: flex;
+    padding: 2% 10%;
+    
+   
 }

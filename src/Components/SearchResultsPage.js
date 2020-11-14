@@ -2,14 +2,16 @@ import { Button } from '@material-ui/core';
 import React from 'react';
 import '../Styles/SearchResultsPage.css';
 import SearchResult from './SearchResult';
-
+import {useStateValue} from '../StateProvider';
 
 
 function SearchResultsPage() {
+    const [state, dispatch] = useStateValue();
+
     return (
         <div className='searchResultsPage'>
             <div className='info'>
-                <p>62 stays · 26 august to 30 august · 2 guest</p>
+                <p>{Math.floor(Math.random()*100)} stays · near {state.place} · for {state.guests} Guests</p>
                 <h1>Stays nearby</h1>
                 <Button variant="outlined">Cancellation Flexibility</Button>
                 <Button variant="outlined">Type of place</Button>
@@ -38,15 +40,15 @@ function SearchResultsPage() {
             <SearchResult
                 img="https://www.smartertravel.com/uploads/2017/07/Untitled-design-8.jpg"
                 location="Entire condominium in Seista Key"
-                title="London Studio Apartments"
+                title="Studio Apartments"
                 description="4 guest · 4 bedroom · 4 bed · 2 bathrooms · Free parking · Washing Machine"
                 star={3.8}
                 price="$135 / night"
             />
             <SearchResult
-                img="https://cdn.bisnow.net/fit?height=489&type=jpeg&url=https%3A%2F%2Fs3.amazonaws.com%2Fcdn.bisnow.net%2Fcontent%2Fimages%2F2017%2F05%2F59151d0978bbf_https_press_atairbnb_com_app_uploads_2016_12_midtown_4.jpeg&width=717&sign=FeltIPi9cOWA36nVIeDvZxwgtiCZrpUyMRdvyZviTUI"
+                img="https://a0.muscache.com/im/pictures/7aeb00be-c2ec-4d97-a2e8-e9b44e84d645.jpg?aki_policy=x_large"
                 location="Beachfront condo in Key West"
-                title="30 mins to Oxford Street, Excel London"
+                title="5 mins to beach, Southmost Point"
                 description="6 guest · 2 bedroom · 3 bed · 2  bathrooms · Wifi · Kitchen · Free parking · Washing Machine"
                 star={4.1}
                 price="$255 / night"
@@ -62,7 +64,7 @@ function SearchResultsPage() {
             <SearchResult
                 img="https://static.trip101.com/paragraph_media/pictures/001/676/061/large/969ae4bb-efd1-4fb9-a4e3-5cb3316dd3c9.jpg?1562227937"
                 location="Entire house in Hollywood"
-                title="The Blue Room In London"
+                title="The Lagoon side In Hollywood, Miami"
                 description="8 guest · 3 bedroom · 4 bed · 3 shared bathrooms · Wifi · Kitchen · Washing Machine"
                 star={4.23}
                 price="$300 / night"

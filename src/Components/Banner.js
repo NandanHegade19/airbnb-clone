@@ -1,26 +1,27 @@
 import { Button } from '@material-ui/core';
 import React, { useState } from 'react';
 import '../Styles/Banner.css';
-import Search from './Search';
+import {useHistory, Link} from 'react-router-dom';
+import Header from './Header';
 
 
 function Banner() {
 
-    const [showSearch, setShowSearch] = useState(false);
+    const history = useHistory()
 
+    const searchPage = (e) => {
+        e.preventDefault();
+        history.push("/search")
+    }
     return (
         <div className = "banner">
-            <div className = "search">
-                {showSearch && <Search/>}
-                <Button variant="outlined" className = "selectDatesBtn" onClick = {() => setShowSearch(!showSearch)}>
-                    {showSearch ? "Hide" : "Search Dates"} </Button>
-            </div>
+            <Header/>
             <div className = "info">
                 <h1>Get out and streach your imagination</h1>
                 <h5>
                     Plan a different kind of getaway to uncover the hidden gems near you.
                 </h5>
-                <Button variant="outlined">Explore Nearby</Button>
+                <Button variant="outlined" onClick = {searchPage}>Explore Nearby</Button>
             </div>
         </div>
     )

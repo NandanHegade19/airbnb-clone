@@ -1,4 +1,4 @@
-.header{
+/*header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,29 +7,51 @@
     background-color: white;
     z-index: 100;
     width: 100%;
+}*/
+.header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    height: 30px;
+    z-index: 10;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    color: #ffffff;
 }
+.searchdates{
+       
+}
+.header__white{
+    background-color: #ffffff;    
+    color: black;
+}
+
 
 .logo{
     object-fit: contain;
-    height: 100px;
+    height: 50px;
     margin-left: 20px;
 }
 .searchbar {
     display: flex;
     align-items: center;
-    flex: 1;
+    flex: 0.7;
     max-width: fit-content;
     padding: 10px;
     height: 30px;
     border: 1px solid lightgray;
     border-radius: 999px;
-
+    background-color: #ffffff;
 }
 .searchbar > input {
     border: none;
-    width: 250px;
     padding: 10px;
     outline-width: 0;
+    color: black;
 }
 .right {
     display: flex;
